@@ -63,7 +63,7 @@ function App() {
     setLoading(true);
     setEmailStatus("");
     try {
-      const response = await fetch("http://localhost:5000/summarize", {
+      const response = await fetch("https://ai-meeting-notes-app.onrender.com/summarize", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ transcript, prompt }),
@@ -89,7 +89,7 @@ function App() {
     setLoading(true);
     setEmailStatus("");
     try {
-      const response = await fetch("http://localhost:5000/share", {
+      const response = await fetch("https://ai-meeting-notes-app.onrender.com/share", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ summary, emails }),
